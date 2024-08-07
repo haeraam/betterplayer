@@ -28,8 +28,8 @@ internal object DataSourceUtils {
         val dataSourceFactory: DataSource.Factory = DefaultHttpDataSource.Factory()
             .setUserAgent(userAgent)
             .setAllowCrossProtocolRedirects(true)
-            .setConnectTimeoutMs(1000 * 60)
-            .setReadTimeoutMs(1000 * 60)
+            .setConnectTimeoutMs(1000 * 600)
+            .setReadTimeoutMs(1000 * 600)
         if (headers != null) {
             val notNullHeaders = mutableMapOf<String, String>()
             headers.forEach { entry ->
